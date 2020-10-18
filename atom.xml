@@ -1,37 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>宋沆群的博客</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://splendid-shq.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2020-10-17T11:49:52.185Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://splendid-shq.github.io/"/>
+  <updated>2020-10-18T09:34:51.812Z</updated>
+  <id>https://splendid-shq.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Hangqun Song</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>庆祝博客搭建成功！！</title>
-    <link href="http://example.com/2020/10/17/hello-world/"/>
-    <id>http://example.com/2020/10/17/hello-world/</id>
+    <title>博客搭建讲解及心得！！</title>
+    <link href="https://splendid-shq.github.io/2020/10/18/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    <id>https://splendid-shq.github.io/2020/10/18/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</id>
+    <published>2020-10-18T06:13:41.899Z</published>
+    <updated>2020-10-18T09:34:51.812Z</updated>
+    
+    <content type="html"><![CDATA[<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><font color=#999AAA > 经过一番不懈的努力，我们终于按照Hexo免费搭建一个属于自己的博客搭建好了一个属于自己的博客，并且还更换一个yilia主题，这也是一个小白的第一篇博客，想和大家聊聊那些踩过的坑。<br>。</font></p><hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1"><p><font color=#999AAA > 以下是本篇文章正文内容，下面案例可供参考，希望对大家有帮助，一起学习一起进步，如果有不对，希望各位多多指正</p><a id="more"></a><h1 id="一、为什么要搭建个人博客？"><a href="#一、为什么要搭建个人博客？" class="headerlink" title="一、为什么要搭建个人博客？"></a>一、为什么要搭建个人博客？</h1><p><font color=#999AAA > 好处</p><ol><li>第一当然是为了酷啊，作为一个程序员怎么能没有自己的个人博客呢</li><li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li><li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li><li>博客内容可以轻松打包、转移、发布到其它平台；</li><li>全是静态文件，访问速度快；</li><li>等等</li></ol><h1 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h1><h3 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1.注册github账号"></a>1.注册github账号</h3><p><font color=#999AAA > 有一个github账号，没有的话去注册一个；<br><img src="https://img-blog.csdnimg.cn/20201018135947630.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NocTkxNzU2NjE1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h3 id="2-下载node-js"><a href="#2-下载node-js" class="headerlink" title="2.下载node.js"></a>2.下载node.js</h3><p><font color='0x000000' > 必装：node.js直接下载对应版本 <a href="https://nodejs.org/en/download/">点击此处</a>进入官方下载界面,但是由于是国外的，所以速度会很慢，这里附上淘宝 <a href="http://npm.taobao.org/mirrors/">镜像源</a>，速度很快。</p><p><font color=red > 注意：一定要点击Node.js and npm，添加至环境变量<br><img src="https://img-blog.csdnimg.cn/20201018140050571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NocTkxNzU2NjE1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1"><h3 id="3-测试是否安装成功以及更改淘宝的cnpm源"><a href="#3-测试是否安装成功以及更改淘宝的cnpm源" class="headerlink" title="3.测试是否安装成功以及更改淘宝的cnpm源"></a>3.测试是否安装成功以及更改淘宝的cnpm源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">node -v         #查看node.js的版本</span><br><span class="line"> </span><br><span class="line">git --version   #查看git的版本</span><br><span class="line"> </span><br><span class="line">npm -v          #查看npm的版本</span><br><span class="line"> </span><br><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  #更换为淘宝的npm</span><br><span class="line"> </span><br><span class="line">cnpm -v         #查看cnpm的版本</span><br><span class="line"> </span><br><span class="line">cnpm install -g hexo-cli    #使用cnpm工具安装hexo</span><br><span class="line"> </span><br><span class="line">hexo -v         #查看hexo的版本</span><br></pre></td></tr></table></figure><h3 id="4-创建文件夹，用来保存你的文章"><a href="#4-创建文件夹，用来保存你的文章" class="headerlink" title="4.创建文件夹，用来保存你的文章"></a>4.创建文件夹，用来保存你的文章</h3><p><font color=#999AAA> 我在E盘下创建一个文件夹用来写blog<br><img src="https://img-blog.csdnimg.cn/20201018140509502.png#pic_center" alt="在这里插入图片描述"><br><font color=#999AAA> 进入此文件夹，空白位置右击，选择Git Bash Here，接下来输入下面的命令<br><img src="https://img-blog.csdnimg.cn/2020101814065531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NocTkxNzU2NjE1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><font color=#999AAA> 执行如下代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init #会自动生成初始化文件，如下图</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20201018141006554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NocTkxNzU2NjE1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s  ##开启一个本机入口http:&#x2F;&#x2F;localhost:4000，实现预览，Ctrl+c关闭入口，才可进行以后的命令</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;hr style=&quot; border:solid; width:100px; height:1px;&quot; color=#000000 size=1&quot;&gt;
+
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;font color=#999AAA &gt; 经过一番不懈的努力，我们终于按照Hexo免费搭建一个属于自己的博客搭建好了一个属于自己的博客，并且还更换一个yilia主题，这也是一个小白的第一篇博客，想和大家聊聊那些踩过的坑。&lt;br&gt;。&lt;/font&gt;&lt;/p&gt;
+&lt;hr style=&quot; border:solid; width:100px; height:1px;&quot; color=#000000 size=1&quot;&gt;
+
+&lt;p&gt;&lt;font color=#999AAA &gt; 以下是本篇文章正文内容，下面案例可供参考，希望对大家有帮助，一起学习一起进步，如果有不对，希望各位多多指正&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搭建成功了！！</title>
+    <link href="https://splendid-shq.github.io/2020/10/17/hello-world/"/>
+    <id>https://splendid-shq.github.io/2020/10/17/hello-world/</id>
     <published>2020-10-17T08:07:44.290Z</published>
-    <updated>2020-10-17T11:49:52.185Z</updated>
+    <updated>2020-10-18T09:35:47.843Z</updated>
     
-    <content type="html"><![CDATA[<p>经过一天的个人博客搭建，终于搭建了属于自己的一个博客网站了。，</p><!-- ### Create a new post<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a> –&gt;</p>]]></content>
+    <content type="html"><![CDATA[<p>我的博客搭建成功了，欢迎访问！</p><!-- ### Create a new post<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a> –&gt;</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;经过一天的个人博客搭建，终于搭建了属于自己的一个博客网站了。，&lt;/p&gt;
+    <summary type="html">&lt;p&gt;我的博客搭建成功了，欢迎访问！&lt;/p&gt;
 &lt;!-- ### Create a new post
 
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span c</summary>
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/s</summary>
       
     
     
